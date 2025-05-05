@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>履歷整理</title>
+  <style>
+    body { font-family: Arial; padding: 10px; width: 300px; }
+    input, button { margin-top: 8px; display: block; width: 100%; }
+    #records { margin-top: 20px; }
+    .company-row { display: flex; gap: 4px; align-items: center; }
+    .company-row input { flex: 1; }
+    .company-row button { width: auto; padding: 4px 8px; font-size: 12px; white-space: nowrap; }
+  </style>
+</head>
+<body>
+  <!-- 傳送欄位 -->
+  <form id="uploadForm">
+    <div class="company-row">
+      <input type="text" name="company" placeholder="公司名稱" required />
+      <button type="button" id="showHistoryBtn">紀錄</button>
+      <button type="button" id="openDriveBtn">資料夾</button>
+    </div>
+    <input type="text" name="position" placeholder="職位" required />
+    <input type="file" name="file1" accept="application/pdf" required />
+    <input type="file" name="file2" accept="application/pdf" required />
+    <button type="submit">傳送至表單</button>
+  </form>
+
+  <!-- 傳送結果顯示 -->
+  <div id="status"></div>
+
+  <!-- 紀錄顯示 -->
+  <button id="getDataBtn">打開表單</button>
+  <div id="records"></div>
+
+  <!-- 引入 JS -->
+  <script src="popup.js"></script>
+</body>
+</html>
